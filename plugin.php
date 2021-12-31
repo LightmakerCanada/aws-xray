@@ -9,11 +9,9 @@
 
 namespace HM\Platform\XRay;
 
-if ( ! function_exists( __NAMESPACE__ . '\\bootstrap' ) ) {
-	// Exit early in the event functions are not available. This likely means X-Ray is
-	// disabled in your environment.
-	return;
-}
+require_once __DIR__ . '/inc/namespace.php';
+
+bootstrap();
 
 require_once __DIR__ . '/inc/query_monitor/namespace.php';
 
